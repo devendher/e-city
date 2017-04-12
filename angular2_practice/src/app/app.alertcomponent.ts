@@ -1,4 +1,4 @@
-import {Component,Input,Output} from '@angular/core';
+import {Component,Input,Output,EventEmitter} from '@angular/core';
 import {AlertModule} from './app.alertcomponent.module';
 @Component({
 	selector:'alert-message',
@@ -10,5 +10,5 @@ export class AlertComponent{
 	
 	@Input() AlertMessage:string;
 	@Input() AlertType:string;
-
+@Output() AlertNotify:EventEmitter<any> =new EventEmitter<any>;
 }
